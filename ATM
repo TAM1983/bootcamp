@@ -1,0 +1,70 @@
+balance = 5000 #Current balance
+def ATM():
+  currentBalance = balance #Local reference
+  while(True):
+    print(""" Welcome to My Bank 
+    Please enter one of the following choices:
+     [C]eck balance
+      [W]ithdraw 
+      [D]eposit
+       [T]ransfer 
+       [E]xit """)
+    choices = input("> ")
+    if choice.upper() == "C":
+      #Check balance
+          check(currentBalance)
+    
+    elif choice.upper() == "W":#Withdraw
+        while (True):
+          cash = int(input("Enter amount to withdraw> "))
+          if cash > 0:
+              currentBalance = withdraw(cash, currentBalance)
+              break
+          else:
+            print("inccorect input")
+def withdraw(cash, currentBalance):
+
+  # Update balance after subtraction
+  # cash, is amount to withdraw
+  if(cash<=currentBalance):
+      currentBalance = currentBalance - cash
+      print(f"Dispensing the amount {cash}")
+      print(f"Remaining balance is: {currentBalance}")
+  else:
+      print("No sufficient funds!")
+      print("Try another option or [E]xit")
+  return currentBalance
+
+def deposit(cash, currentBalance):# Put money into your account
+ # Update balance after addition
+ # TODO
+ currentBalance = currentBalance + cash
+ print(f"deposit  amount is {cash}")
+ print(f"the balance is: {currentBalance}")
+ return currentBalance
+def transfer(cash, currentBalance):#Sending money to another person
+ #The amount, a
+ #Account number, acc
+ #Update balance after subtraction
+ # TODO
+
+ if(cash<=currentBalance):
+      currentBalance = currentBalance - cash
+      print(f"Transfering the amount {cash}")
+      print(f"Remaining balance is: {currentBalance}")
+ else:
+      print("No sufficient funds!")
+      print("Try another option or [E]xit")
+ 
+ 
+
+
+ return currentBalance
+def check(currentBalance):
+ #Present balance
+ # TODO
+ print(f"the balance is: {currentBalance}")
+ return currentBalance
+
+ATM()
+          
