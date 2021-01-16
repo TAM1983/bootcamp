@@ -1,0 +1,38 @@
+#import the package numpy and make the shortcut "np" for it.
+
+import numpy as np
+from numpy import random
+
+#define a numpy array [1, 2, 3, 4, 5] and assign it to variable x
+x_array_list = np.array([1,2,3,4,5])
+
+x = x_array_list
+
+# print X 
+print (x)
+
+#Print the mean of x using numpy
+print (np.mean(x))
+#Print the maximum number in array x
+print (np.amax(x))
+
+#Generate a random number between 35 and 40
+
+ran = random.randint(5)
+print (ran + 35)
+
+#generate a list (N) of 1000 numbers with random values between 100 and150
+
+N =np.random.randint(low=100, high=150, size=1000)
+#print (N)
+
+#mean
+print("mean of arr : ", np.mean(N)) 
+# median 
+print("median of arr : ", np.median(N))
+ #std
+print("std of arr : ", np.std(N))
+
+#variance
+
+print("variance of arr : ", np.var(N))
